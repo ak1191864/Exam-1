@@ -1,0 +1,115 @@
+// assignment: exam-1
+// student: Alliana Kelley
+// downloaded: 10/5/2026, 7:57:54 PM
+
+// ===== Problem 1: Hallway Lights (0/5 worlds matched at last run) =====
+function problem_1() {
+function turnRight(k) {
+  k.turnLeft();
+  k.turnLeft();
+  k.turnLeft();
+  }
+function turnAround(k) {
+    k.turnLeft();
+    k.turnLeft();
+    }
+   function turbo(k) {
+     for (let i = 0; i < 7; i++) {
+       k.move();
+      }
+     }
+    function Leftmove(k) {
+            k.turnLeft();
+      k.move();
+      k.turnLeft();
+      }
+      function Rightmove(k) {
+        turnRight(k);
+      k.move();
+      turnRight(k);
+      }
+      function LTR(k) {
+      Leftmove(k);
+      turbo(k);
+      Rightmove(k);
+      turbo(k);
+      Leftmove(k);
+      turbo(k);
+      Rightmove(k);
+      turbo(k);
+      Leftmove(k);
+      turbo(k);
+      Rightmove(k);
+      turbo(k);
+      Leftmove(k);
+      turbo(k);
+      }
+function main(k) {
+  if (k.cornerColorIs("Red")) {
+    k.paintCorner("Yellow");
+} 
+turbo(k);
+LTR(k);
+}
+  return main;
+}
+// ===== end Problem 1 =====
+
+// ===== Problem 2: Sorting Stones (1/6 worlds matched at last run) =====
+function problem_2() {
+function turnRight(k) {
+  k.turnLeft();
+  k.turnLeft();
+  k.turnLeft();
+  }
+function turnAround(k) {
+    k.turnLeft();
+    k.turnLeft();
+    }
+    function turbo(k) {
+     k.move();
+     k.move();
+     k.move();
+     k.move();
+     k.move();
+     k.move();
+     }
+function main(k) {
+  for (let i = 0; i < 6; i++) {
+    k.move();
+    if (k.beepersPresent() && k.frontIsClear()) {
+      k.pickBeeper();
+        }
+        else if (k.beepersPresent() && k.frontIsBlocked()) {
+          k.pickBeeper();
+          turnAround(k);
+          turbo(k);
+          }
+      }
+      turnAround(k);
+      turbo(k);
+      k.turnLeft();
+     
+      
+}
+  return main;
+}
+// ===== end Problem 2 =====
+
+// ===== Problem 3: Treasure Map (not run since last edit) =====
+function problem_3() {
+function turnRight(k) {
+  k.turnLeft();
+  k.turnLeft();
+  k.turnLeft();
+  }
+function turnAround(k) {
+    k.turnLeft();
+    k.turnLeft();
+    }
+function main(k) {
+  
+}
+  return main;
+}
+// ===== end Problem 3 =====
